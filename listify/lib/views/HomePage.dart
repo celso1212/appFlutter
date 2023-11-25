@@ -3,6 +3,8 @@ import 'package:listify/components/CardItem.dart';
 import 'package:listify/components/Tabbar.dart';
 import 'package:listify/components/CardItem.dart';
 import 'package:listify/components/Tabbar.dart';
+import 'package:listify/views/CategoriesList.dart';
+import 'package:listify/views/DetailsAD.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -40,12 +42,19 @@ class _HomePageState extends State<HomePage> {
             child: ListView.builder(
                 itemCount: 12,
                 itemBuilder: (context, index) {
-                  return CardItem(
-                    title: 'Couch',
-                    price: '500',
-                    image: 'https://source.unsplash.com/150x180/?couch',
-                    city: 'São José',
-                    date: '11/18',
+                  return InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => DetailsAD(),
+                      ));
+                    },
+                    child: CardItem(
+                      title: 'Couch',
+                      price: '500',
+                      image: 'https://source.unsplash.com/150x180/?couch',
+                      city: 'São José',
+                      date: '11/18',
+                    ),
                   );
                 }),
           )

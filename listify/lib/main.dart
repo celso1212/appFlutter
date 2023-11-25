@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:listify/views/DetailsAD.dart';
+import 'package:listify/views/DetailsAD.dart';
 import 'package:listify/views/HomePage.dart';
 
 void main() {
@@ -8,4 +10,3 @@ void main() {
     theme: ThemeData(primarySwatch: Colors.blue),
   ));
 }
-
